@@ -3835,7 +3835,7 @@
 
             html = html.replace(new RegExp("\<\s*" + tag + "\s*([^\>]*)\>([^\>]*)\<\s*\/" + tag + "\s*\>", "igm"), "");
         }
-        
+
         //return html;
 
         if (typeof attrs !== "undefined")
@@ -3852,7 +3852,7 @@
             {
                 html = html.replace(htmlTagRegex, function($1, $2, $3, $4, $5) {
                     var el = $("<" + $2 + ">" + $4 + "</" + $5 + ">");
-                    var _attrs = $($1)[0].attributes;
+                    var _attrs = $($1)[0]?.attributes;
                     var $attrs = {};
                     
                     $.each(_attrs, function(i, e) {
